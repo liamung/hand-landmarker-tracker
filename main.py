@@ -77,6 +77,8 @@ options = vision.HandLandmarkerOptions(
 landmarker = vision.HandLandmarker.create_from_options(options)
 
 cap = cv.VideoCapture(0)
+
+# Camera feedback properties
 cap.set(cv.CAP_PROP_FRAME_WIDTH, 1280)
 cap.set(cv.CAP_PROP_FRAME_HEIGHT, 720)
 cap.set(cv.CAP_PROP_FPS, 30)
