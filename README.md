@@ -1,4 +1,4 @@
-# test_mediapipe
-mediapipe w/ python 3.12
+# hand gesture identifier
+Incorporates two TFLite classifiers for static and motion-based gestures.
 
-to run in venv on python 3.12
+Identifies 4 different hand gestures as well as utilizes a bounding box overlay and FPS monitoring.
