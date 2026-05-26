@@ -5,6 +5,7 @@ from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 from mediapipe import solutions
 from mediapipe.framework.formats import landmark_pb2
+from utils import CvFpsCalc
 import time
 
 MARGIN = 10  # pixels
@@ -86,6 +87,8 @@ cap.set(cv.CAP_PROP_FPS, 30)
 if not cap.isOpened():
     print("Cannot open camera")
     exit()
+
+cvFpsCalc = CvFpsCalc(buffer_len=10)
 while True:
     # Capture frame-by-frame
     ret, frame = cap.read()
